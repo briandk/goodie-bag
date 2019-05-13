@@ -3,7 +3,9 @@
 const express = require('express')
 const path = require('path')
 const volleyball = require('volleyball')
-import {} from "./api/candies"
+import {
+  router as apiRouter
+} from "./api/index"
 
 const app = express()
 
@@ -19,7 +21,7 @@ app.use(express.urlencoded({
 // static middleware
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.use('/api', require('./api')) // include our routes!
+app.use('/api', apiRouter) // include our routes!
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))

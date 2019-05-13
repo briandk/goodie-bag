@@ -1,6 +1,14 @@
 'use strict'
+import {
+  router as candies
+} from "./candies"
 
 const router = require('express').Router()
+router.use("/candies", candies)
+
+export {
+  router
+}
 
 // Your routes go here!
 // NOTE: Any routes that you put here are ALREADY mounted on `/api`
@@ -24,5 +32,3 @@ router.use((req, res, next) => {
   err.status = 404
   next(err)
 })
-
-module.exports = router

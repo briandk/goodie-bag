@@ -1,20 +1,20 @@
 const Sequelize = require('sequelize');
 const db = require('../database');
 
-module.exports = db.define('candy', {
+export const Candy = db.define('candy', {
   name: {
     type: Sequelize.STRING,
     validate: {
       notEmpty: true,
-      notNull: true
-    }
+    },
+    allowNull: false
   },
   description: {
     type: Sequelize.STRING,
     validate: {
       notEmpty: true,
-      notNull: true
-    }
+    },
+    allowNull: false
   },
   quantity: {
     type: Sequelize.INTEGER,
