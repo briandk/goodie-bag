@@ -3,11 +3,11 @@
 ## Getting started
 
 1. Fork and clone this repo
-2. `npm install`
+2. `yarn install`
 3. Read the rest of this `README.md` carefully - it contains the requirements for the project
-4. Start the build process and your application with: `npm run start:dev`. If you using Windows, you may need to execute `npm run start-server` and `npm run build-watch` separately (in their own terminal tabs).
+4. Start the build process and your application with: `yarn run start:dev`. If you using Windows, you may need to execute `yarn run start-server` and `yarn run build-watch` separately (in their own terminal tabs).
 5. If you navigate to the URL you should see some UI already :) [We already have some connection code to get you started]
-6. Check out the starting seed file in `seed.js` - you can run it by executing `npm run seed`
+6. Check out the starting seed file in `seed.js` - you can run it by executing `yarn run seed`
 
 ## Details
 
