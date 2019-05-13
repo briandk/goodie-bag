@@ -4,8 +4,9 @@
   "description": "A review time project",
   "main": "main.js",
   "scripts": {
+    "babel-node": "babel-node --preset=es-2015",
     "start:dev": "npm run build-watch & npm run start-server",
-    "start-server": "nodemon --watch server main.js -e html,js,css",
+    "start-server": "nodemon --exec npm run babel-node --watch server -e html,js,css -- main.js",
     "build-watch": "webpack -w",
     "start": "echo 'Running server for production - developers, use npm run start:dev for development' && node main",
     "seed": "node seed.js"
@@ -32,6 +33,7 @@
     "sequelize": "^4.37.8"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
